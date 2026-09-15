@@ -102,7 +102,8 @@ details[open] .plus{transform:rotate(45deg);background:var(--blue-bg);border-col
 .price-map{margin-top:14px;background:#fff;border:1px solid var(--line);border-radius:12px;padding:13px}
 .map-head{display:flex;justify-content:space-between;gap:14px;align-items:end}
 .map-title{font-size:.95rem;font-weight:950}
-.map-legend{font-size:.72rem;color:var(--muted);text-align:right}
+.map-head-right{display:flex;align-items:center;gap:8px;justify-content:flex-end;flex-wrap:wrap}
+.map-current{display:inline-block;font-size:.72rem;font-weight:900;color:var(--blue);background:#f3f7ff;border:1px solid #b9ccef;border-radius:7px;padding:3px 7px;white-space:nowrap}
 .canvas-wrap{height:330px;margin-top:8px;border:1px solid #e3e8ed;border-radius:9px;background:#fff;padding:4px}
 
 .session-values{
@@ -240,7 +241,7 @@ canvas{width:100%;height:100%}
 
 
  .map-head{display:block}
- .map-legend{text-align:left;margin-top:6px;line-height:1.45}
+ .map-head-right{justify-content:flex-start;margin-top:6px}
  .canvas-wrap{height:420px;padding:2px}
  .session-values{grid-template-columns:1fr;gap:6px}
  .session-value{padding:8px 9px}
@@ -315,7 +316,7 @@ canvas{width:100%;height:100%}
 <div class="strategy down"><div class="st">29,125 이탈 후 회복 실패 → 하락 대응</div><div class="condition">29,125~29,135 이탈 후 되돌림도 막힘</div><div class="action"><b>대응:</b> 반등 매도 우선<br/><b>다음 방어선:</b> 29,100~29,105 → 29,055~29,065</div><div class="cancel">29,135를 빠르게 재탈환하면 이탈 실패 가능성을 먼저 봅니다.</div></div>
 </div>
 <div class="price-map">
-<div class="map-head"><div><div class="map-title">오늘 아시아·유럽 세션 가격구조</div></div><div class="map-legend">유럽 세션 고저와 전일 중심값을 본장 전 핵심 기준으로 사용</div></div>
+<div class="map-head"><div><div class="map-title">오늘 아시아·유럽 세션 가격구조</div></div><div class="map-head-right"><div class="map-current" data-map-current="mapNq"></div></div></div>
 <div class="canvas-wrap"><canvas id="mapNq"></canvas></div>
 <div class="session-values">
 <div class="session-value"><div class="sv-name">오늘 아시아 세션</div><div class="sv-data"><span class="ohlc-item"><span class="ohlc-label">고가</span><b>29,200.00</b></span><span class="ohlc-sep">·</span><span class="ohlc-item"><span class="ohlc-label">종가</span><b>29,057.75</b></span><span class="ohlc-sep">·</span><span class="ohlc-item"><span class="ohlc-label">저가</span><b>29,015.75</b></span></div></div>
@@ -355,11 +356,11 @@ canvas{width:100%;height:100%}
 <div class="title">항셍 야간장 대응</div>
 <div class="strategy-grid">
 <div class="strategy up"><div class="st">24,805 위 돌파·지지 → 반등 연장</div><div class="condition">24,795~24,805 돌파 후 눌림에서도 유지</div><div class="action"><b>대응:</b> 눌림 매수 우선<br/><b>다음 목표:</b> 24,835~24,850 → 24,885~24,900</div><div class="cancel">다시 24,795 아래로 밀리면 돌파 실패로 봅니다.</div></div>
-<div class="strategy box"><div class="st">24,770~24,805 사이 → 박스 대응</div><div class="condition">야간장 고점과 중간 지지 사이에서 왕복</div><div class="action">가운데 추격 금지. 24,770 방어 또는 24,805 돌파 확인 후 대응합니다.</div><div class="cancel">24,785 돌파 또는 24,735 이탈 시 방향 전략으로 전환합니다.</div></div>
+<div class="strategy box"><div class="st">24,770~24,805 사이 → 박스 대응</div><div class="condition">야간장 고점과 중간 지지 사이에서 왕복</div><div class="action">가운데 추격 금지. 24,770 방어 또는 24,805 돌파 확인 후 대응합니다.</div><div class="cancel">24,805 돌파 또는 24,765 이탈 시 방향 전략으로 전환합니다.</div></div>
 <div class="strategy down"><div class="st">24,765 이탈 후 회복 실패 → 하락 대응</div><div class="condition">24,765~24,775 이탈 후 되돌림도 막힘</div><div class="action"><b>대응:</b> 반등 매도 우선<br/><b>다음 방어선:</b> 24,735~24,745 → 24,700~24,705</div><div class="cancel">24,775를 빠르게 재탈환하면 이탈 실패 가능성을 먼저 봅니다.</div></div>
 </div>
 <div class="price-map">
-<div class="map-head"><div><div class="map-title">오늘 주간장 마감과 야간장 진행 구조</div></div><div class="map-legend">야간장 고점 24,780 · 현재 24,772</div></div>
+<div class="map-head"><div><div class="map-title">오늘 주간장 마감과 야간장 진행 구조</div></div><div class="map-head-right"><div class="map-current" data-map-current="mapHsi"></div></div></div>
 <div class="canvas-wrap"><canvas id="mapHsi"></canvas></div>
 <div class="session-values">
 <div class="session-value"><div class="sv-name">오늘 오후장</div><div class="sv-data"><span class="ohlc-item"><span class="ohlc-label">고가</span><b>24,839</b></span><span class="ohlc-sep">·</span><span class="ohlc-item"><span class="ohlc-label">종가</span><b>24,667</b></span><span class="ohlc-sep">·</span><span class="ohlc-item"><span class="ohlc-label">저가</span><b>24,619</b></span></div></div>
@@ -404,7 +405,7 @@ canvas{width:100%;height:100%}
 <div class="strategy down"><div class="st">1,034 아래 이탈 시 → 약세 연장</div><div class="condition">오늘 저점 1,033.95 이탈 후 회복 실패</div><div class="action"><b>다음 방어선:</b> 1,031~1,032 → 1,016~1,018</div><div class="cancel">1,036 위를 빠르게 되찾으면 이탈 실패를 먼저 봅니다.</div></div>
 </div>
 <div class="price-map">
-<div class="map-head"><div><div class="map-title">전일 야간장과 오늘 정규장 마감 구조</div></div><div class="map-legend">코스피는 마감요약용</div></div>
+<div class="map-head"><div><div class="map-title">전일 야간장과 오늘 정규장 마감 구조</div></div><div class="map-head-right"><div class="map-current" data-map-current="mapKospi"></div></div></div>
 <div class="canvas-wrap"><canvas id="mapKospi"></canvas></div>
 <div class="session-values">
 <div class="session-value"><div class="sv-name">전일 야간장</div><div class="sv-data"><span class="ohlc-item"><span class="ohlc-label">고가</span><b>1,046.55</b></span><span class="ohlc-sep">·</span><span class="ohlc-item"><span class="ohlc-label">종가</span><b>1,028.80</b></span><span class="ohlc-sep">·</span><span class="ohlc-item"><span class="ohlc-label">저가</span><b>1,016.00</b></span></div></div>
@@ -480,6 +481,8 @@ const maps={
 
 function draw(id,cfg){
   const cv=document.getElementById(id); if(!cv)return;
+  const badge=document.querySelector('[data-map-current="'+id+'"]');
+  if(badge) badge.textContent=(cfg.lastLabel||'현재')+' '+cfg.last.toLocaleString();
   const r=cv.getBoundingClientRect(); if(r.width<40||r.height<40)return;
 
   const mobile = r.width < 700;
@@ -601,27 +604,8 @@ function draw(id,cfg){
     c.fillText(item.price,labelX+6,item.labelY+11);
   });
 
-  // Draw final-price text on top as well. On mobile an opaque white backing
-  // keeps the label readable even when a range bar passes underneath it.
-  c.fillStyle='#245fc1';
-  c.font = mobile ? 'bold 12px system-ui' : 'bold 13px system-ui';
-  if(mobile){
-    const txt=(cfg.lastLabel||'현재')+' '+cfg.last.toLocaleString();
-    const tw=c.measureText(txt).width;
-    c.fillStyle='rgba(255,255,255,.96)';
-    c.fillRect(w-p.r-tw-12,yl-12,tw+9,18);
-    c.fillStyle='#245fc1'; c.textAlign='right';
-    c.fillText(txt,w-p.r-4,yl+2);
-  }else{
-    const txt=(cfg.lastLabel||'현재')+' '+cfg.last.toLocaleString();
-    const tw=c.measureText(txt).width;
-    const tx=w-p.r-10;
-    c.fillStyle='rgba(255,255,255,.96)';
-    c.fillRect(tx-tw-10,yl-12,tw+12,18);
-    c.fillStyle='#245fc1';
-    c.textAlign='right';
-    c.fillText(txt,tx,yl+2);
-  }
+  // Current/close value is displayed once in the map header.
+  // The blue dashed guide line remains in the canvas for structural reference.
 }
 function drawAll(){Object.entries(maps).forEach(([id,cfg])=>draw(id,cfg))}
 document.querySelectorAll('details.market').forEach(d=>d.addEventListener('toggle',()=>setTimeout(drawAll,45)));
