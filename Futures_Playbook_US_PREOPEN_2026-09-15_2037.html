@@ -646,8 +646,14 @@ function draw(id,cfg){
     c.fillStyle='#245fc1'; c.textAlign='right';
     c.fillText(txt,w-p.r-4,yl+2);
   }else{
-    c.textAlign='left';
-    c.fillText((cfg.lastLabel||'현재')+' '+cfg.last.toLocaleString(),w-p.r+10,yl+4);
+    const txt=(cfg.lastLabel||'현재')+' '+cfg.last.toLocaleString();
+    const tw=c.measureText(txt).width;
+    const tx=w-p.r-10;
+    c.fillStyle='rgba(255,255,255,.96)';
+    c.fillRect(tx-tw-10,yl-12,tw+12,18);
+    c.fillStyle='#245fc1';
+    c.textAlign='right';
+    c.fillText(txt,tx,yl+2);
   }
 }
 function drawAll(){Object.entries(maps).forEach(([id,cfg])=>draw(id,cfg))}
