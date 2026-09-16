@@ -94,6 +94,10 @@ details[open] .plus{transform:rotate(45deg);background:var(--blue-bg);border-col
 .strategy.box{border-top:4px solid #c08a12}
 .strategy.down{border-top:4px solid var(--red)}
 .strategy .st{font-size:.93rem;font-weight:950;line-height:1.4}
+.strategy .card-label{font-size:.72rem;font-weight:950;margin-bottom:5px}
+.strategy.up .card-label{color:var(--green)}
+.strategy.box .card-label{color:#9a6b00}
+.strategy.down .card-label{color:var(--red)}
 .strategy .condition{font-size:.82rem;font-weight:800;background:#f6f8fa;border-radius:8px;padding:7px 8px;margin-top:7px;line-height:1.5}
 .strategy .action{font-size:.82rem;line-height:1.53;margin-top:7px}
 .strategy .cancel{font-size:.74rem;color:var(--muted);margin-top:6px}
@@ -292,7 +296,7 @@ canvas{width:100%;height:100%}
 <div class="use"><b>15:07 마감 기준</b> · 당일 99.56~99.66 · 전일 99.62. <b>전일과 거의 같은 수준이라 방향성 영향은 중립</b>입니다.</div>
 </div>
 </div>
-<div class="guide-foot"><b>유럽 세션 해석:</b> WTI 하락은 위험자산에 우호적이지만 10년물이 5% 직하단입니다. <b>금리 5% 재돌파 시 NQ 상단 추격을 줄이고, 금리 안정 + WTI 추가 하락이면 눌림 매수 쪽 신뢰도를 높입니다.</b></div>
+<div class="guide-foot"><b>체크포인트:</b> WTI 하락은 위험자산에 우호적이지만 10년물이 5% 직하단입니다. <b>금리 5% 재돌파 시 NQ 상단 추격을 줄이고, 금리 안정 + WTI 추가 하락이면 눌림 매수 쪽 신뢰도를 높입니다.</b></div>
 </section>
 <!-- KOSPI -->
 
@@ -314,7 +318,7 @@ canvas{width:100%;height:100%}
 <div class="term"><div class="tn">돌파 / 이탈</div><div class="td">저항 위로 올라서는 것을 돌파, 지지 아래로 내려가는 것을 이탈이라고 합니다. 이후 그 가격을 유지하는지가 중요합니다.</div></div>
 <div class="term"><div class="tn">지지·저항 전환</div><div class="td">넘긴 저항이 눌림에서 지지가 되거나, 깨진 지지가 반등에서 저항이 되는 움직임입니다.</div></div>
 <div class="term"><div class="tn">눌림 / 되돌림</div><div class="td">상승 중 잠시 내려오거나 하락 중 잠시 반등하는 움직임입니다. 돌파한 가격대를 다시 확인할 때 자주 나타납니다.</div></div>
-<div class="term"><div class="tn">5일선 / 20일선</div><div class="td">최근 5일·20일 평균가격입니다. 다른 고저·피벗·VWAP 계열과 겹칠 때 구조적 중요도를 높입니다.</div></div>
+<div class="term"><div class="tn">5일선 / 20일선</div><div class="td">최근 5일·20일 평균가격입니다. 가격이 이 부근에서 지지·저항을 받는지 확인합니다.</div></div>
 <div class="term"><div class="tn">핵심 가격대</div><div class="td">여러 가격 구조가 겹쳐 반응 가능성이 높아진 구간입니다. 한 가격보다 범위로 대응합니다.</div></div>
 <div class="term"><div class="tn">라운드 가격</div><div class="td">1,100·25,000·30,000처럼 기억하기 쉬운 둥근 가격입니다. 주문과 심리가 모이기 쉬워 지지·저항이 되기도 합니다.</div></div>
 <div class="term"><div class="tn">주간장 / 야간장</div><div class="td">주간 정규 거래시간과 그 이후 이어지는 선물 거래시간입니다. 야간장은 해외시장 움직임을 먼저 반영할 수 있습니다.</div></div>
@@ -332,17 +336,16 @@ canvas{width:100%;height:100%}
 </div>
 <div class="firstline">
 <div class="firstbox"><div class="lab">1차 저항</div><div class="big red">29,365 ~ 29,380</div><div class="desc">아시아 고점권 첫 저항.</div></div>
-<div class="firstbox"><div class="lab">1차 지지</div><div class="big green">29,320 ~ 29,335</div><div class="desc">유럽 개장 전 핵심 방어대.</div></div>
+<div class="firstbox"><div class="lab">1차 지지</div><div class="big green">29,320 ~ 29,335</div><div class="desc">유럽 개장 전 핵심 지지대.</div></div>
 <div class="firstbox"><div class="lab">대표 현물 확인</div><div class="big">NVIDIA · Apple · Microsoft</div><div class="desc">유럽 시간에는 10년물·WTI를 우선 보고, 미국 현물 개장 후 3개 중 2개 이상 동조 여부를 확인합니다.</div></div>
 </div>
-<div class="hint-more">가까운 후보는 정리하고, 단타에 필요한 중간 가격대와 구조적 레벨은 유지했습니다.</div>
 </summary>
 <div class="detail">
-<div class="title">가격 조건 → 대응 → 다음 가격 → 취소 조건</div>
+<div class="title">상승 · 박스권 · 하락 대응 전략</div>
 <div class="strategy-grid">
-<div class="strategy up"><div class="st">29,380 위 안착 → 상승 대응</div><div class="condition">돌파 뒤 눌림에서도 29,365 위 유지</div><div class="action"><b>대응:</b> 눌림 매수 우선<br/><b>다음 목표:</b> 29,400~29,415 → 29,435~29,450 → 29,490~29,505</div><div class="cancel">29,365 아래로 재진입하면 추격 중단.</div></div>
-<div class="strategy box"><div class="st">29,320~29,380 → 단기 박스 대응</div><div class="condition">상단 돌파 실패와 하단 방어가 반복</div><div class="action"><b>대응:</b> 가운데 추격 금지. 양 끝 반응만 짧게 대응.</div><div class="cancel">29,380 위 지지 또는 29,320 아래 저항 전환 시 방향 대응.</div></div>
-<div class="strategy down"><div class="st">29,320 이탈 후 회복 실패 → 하락 대응</div><div class="condition">반등이 29,320~29,335에서 다시 막힘</div><div class="action"><b>대응:</b> 반등 매도 우선<br/><b>다음 방어선:</b> 29,290~29,305 → 29,250~29,265 → 29,205~29,230 → 29,150~29,165</div><div class="cancel">29,335를 빠르게 재탈환하면 하락 추격 축소.</div></div>
+<div class="strategy up"><div class="card-label">상승 대응</div><div class="st">29,380 위 안착</div><div class="condition">돌파 뒤 눌림에서도 29,365 위 유지</div><div class="action"><b>대응:</b> 눌림 시 매수 우선<br/><b>상방 목표 순서:</b> 29,400~29,415 → 29,435~29,450 → 29,490~29,505</div><div class="cancel"><b>취소 조건:</b> 29,365 아래 재이탈 후 회복 실패</div></div>
+<div class="strategy box"><div class="card-label">박스권 대응</div><div class="st">29,320~29,380 안에서 왕복</div><div class="condition">상단 돌파 실패와 하단 지지가 반복</div><div class="action"><b>대응:</b> 중앙 추격 자제 · 하단 반응 시 매수 / 상단 실패 시 매도</div><div class="cancel"><b>전환 조건:</b> 29,380 위 안착 또는 29,320 아래 이탈 후 회복 실패</div></div>
+<div class="strategy down"><div class="card-label">하락 대응</div><div class="st">29,320 이탈 후 회복 실패</div><div class="condition">반등이 29,320~29,335에서 다시 막힘</div><div class="action"><b>대응:</b> 반등 시 매도 우선<br/><b>하방 목표 순서:</b> 29,290~29,305 → 29,250~29,265 → 29,205~29,230 → 29,150~29,165</div><div class="cancel"><b>취소 조건:</b> 29,335 위 재진입 후 유지</div></div>
 </div>
 <div class="price-map">
 <div class="map-head"><div><div class="map-title">전일 전체와 오늘 아시아 세션 가격구조</div></div><div class="map-current">현재 29,344.50</div></div>
@@ -351,10 +354,10 @@ canvas{width:100%;height:100%}
 <div class="session-value"><div class="sv-name">9/15 전일 전체 · NQZ26</div><div class="sv-data"><span class="ohlc-item"><span class="ohlc-label">고가</span><b>29,495.25</b></span><span class="ohlc-sep">·</span><span class="ohlc-item"><span class="ohlc-label">종가</span><b>29,277.00</b></span><span class="ohlc-sep">·</span><span class="ohlc-item"><span class="ohlc-label">저가</span><b>29,207.50</b></span></div></div>
 <div class="session-value"><div class="sv-name">9/16 아시아 · 15:46 현재</div><div class="sv-data"><span class="ohlc-item"><span class="ohlc-label">고가</span><b>29,372.50</b></span><span class="ohlc-sep">·</span><span class="ohlc-item"><span class="ohlc-label">현재</span><b>29,344.50</b></span><span class="ohlc-sep">·</span><span class="ohlc-item"><span class="ohlc-label">저가</span><b>29,226.00</b></span></div></div>
 </div></div>
-<div class="ladder-title">중요 가격대 — 트레이딩 공간과 구조적 중요도를 함께 반영</div>
+<div class="ladder-title">중요 가격대</div>
 <div class="level-rails">
 <div class="level-rail res"><div class="rail-head"><span class="rail-icon">↑</span>저항·목표</div><div class="rail-steps"><div class="rail-step" data-step="1"><div class="step">1차</div><div class="price">29,365~29,380</div><div class="meaning">아시아 고점권.</div></div><div class="rail-step" data-step="2"><div class="step">2차</div><div class="price">29,400~29,415</div><div class="meaning">중간 상단 구간.</div></div><div class="rail-step" data-step="3"><div class="step">3차</div><div class="price">29,435~29,450</div><div class="meaning">강한 상단 저항.</div></div><div class="rail-step" data-step="4"><div class="step">4차</div><div class="price">29,490~29,505</div><div class="meaning">전일 고점권.</div></div></div></div>
-<div class="level-rail sup"><div class="rail-head"><span class="rail-icon">↓</span>지지·방어선</div><div class="rail-steps"><div class="rail-step" data-step="1"><div class="step">1차</div><div class="price">29,320~29,335</div><div class="meaning">현재 핵심 지지.</div></div><div class="rail-step" data-step="2"><div class="step">2차</div><div class="price">29,290~29,305</div><div class="meaning">중간 방어 구간.</div></div><div class="rail-step" data-step="3"><div class="step">3차</div><div class="price">29,250~29,265</div><div class="meaning">시가권 지지.</div></div><div class="rail-step" data-step="4"><div class="step">4차</div><div class="price">29,205~29,230</div><div class="meaning">당일·전일 저점권.</div></div><div class="rail-step" data-step="5"><div class="step">5차</div><div class="price">29,150~29,165</div><div class="meaning">하단 구조 지지.</div></div></div></div>
+<div class="level-rail sup"><div class="rail-head"><span class="rail-icon">↓</span>지지·하방 목표</div><div class="rail-steps"><div class="rail-step" data-step="1"><div class="step">1차</div><div class="price">29,320~29,335</div><div class="meaning">현재 핵심 지지.</div></div><div class="rail-step" data-step="2"><div class="step">2차</div><div class="price">29,290~29,305</div><div class="meaning">중간 지지 구간.</div></div><div class="rail-step" data-step="3"><div class="step">3차</div><div class="price">29,250~29,265</div><div class="meaning">시가권 지지.</div></div><div class="rail-step" data-step="4"><div class="step">4차</div><div class="price">29,205~29,230</div><div class="meaning">당일·전일 저점권.</div></div><div class="rail-step" data-step="5"><div class="step">5차</div><div class="price">29,150~29,165</div><div class="meaning">하단 구조 지지.</div></div></div></div>
 </div>
 <div class="confirm-block"><div class="title">NQ 확인법</div><div class="confirm-how">10년물이 5% 아래에서 안정되고 WTI가 추가 하락하면 상단 돌파에 우호적입니다. 반대로 금리 5% 재돌파 + WTI 반등이면 상단 추격을 줄입니다.</div></div>
 </div>
@@ -368,17 +371,16 @@ canvas{width:100%;height:100%}
 </div>
 <div class="firstline">
 <div class="firstbox"><div class="lab">1차 저항</div><div class="big red">24,735 ~ 24,750</div><div class="desc">오후장 고점권 첫 저항.</div></div>
-<div class="firstbox"><div class="lab">1차 지지</div><div class="big green">24,665 ~ 24,685</div><div class="desc">오후장 저점권 첫 방어대.</div></div>
+<div class="firstbox"><div class="lab">1차 지지</div><div class="big green">24,665 ~ 24,685</div><div class="desc">오후장 저점권 첫 지지대.</div></div>
 <div class="firstbox"><div class="lab">대표 현물 확인</div><div class="big">Tencent · Alibaba · HSBC</div><div class="desc">오후장 남은 시간에 선물 방향과 3개 대형주의 동조 여부를 확인합니다.</div></div>
 </div>
-<div class="hint-more">오전·오후 구조를 함께 반영하되, 붙어 있는 약한 후보는 줄였습니다.</div>
 </summary>
 <div class="detail">
-<div class="title">가격 조건 → 대응 → 다음 가격 → 취소 조건</div>
+<div class="title">상승 · 박스권 · 하락 대응 전략</div>
 <div class="strategy-grid">
-<div class="strategy up"><div class="st">24,750 위 안착 → 상승 대응</div><div class="condition">돌파 뒤 24,735 위 유지</div><div class="action"><b>대응:</b> 눌림 매수 우선<br/><b>다음 목표:</b> 24,775~24,810 → 24,835~24,855 → 24,875~24,900 → 24,980~25,025</div><div class="cancel">24,735 아래로 다시 밀리면 추격 중단.</div></div>
-<div class="strategy box"><div class="st">24,665~24,750 → 박스 대응</div><div class="condition">오후장 고저 안에서 반복 왕복</div><div class="action"><b>대응:</b> 가운데 추격 금지. 양 끝 반응만 짧게 대응.</div><div class="cancel">24,750 위 지지 또는 24,665 아래 저항 전환 시 방향 대응.</div></div>
-<div class="strategy down"><div class="st">24,665 이탈 후 회복 실패 → 하락 대응</div><div class="condition">반등이 24,665~24,685에서 다시 막힘</div><div class="action"><b>대응:</b> 반등 매도 우선<br/><b>다음 방어선:</b> 24,620~24,640 → 24,570~24,590 → 24,530~24,550</div><div class="cancel">24,685를 빠르게 재탈환하면 하락 추격 축소.</div></div>
+<div class="strategy up"><div class="card-label">상승 대응</div><div class="st">24,750 위 안착</div><div class="condition">돌파 뒤 24,735 위 유지</div><div class="action"><b>대응:</b> 눌림 시 매수 우선<br/><b>상방 목표 순서:</b> 24,775~24,810 → 24,835~24,855 → 24,875~24,900 → 24,980~25,025</div><div class="cancel"><b>취소 조건:</b> 24,735 아래 재이탈 후 회복 실패</div></div>
+<div class="strategy box"><div class="card-label">박스권 대응</div><div class="st">24,665~24,750 안에서 왕복</div><div class="condition">오후장 고저 안에서 반복 왕복</div><div class="action"><b>대응:</b> 중앙 추격 자제 · 하단 반응 시 매수 / 상단 실패 시 매도</div><div class="cancel"><b>전환 조건:</b> 24,750 위 안착 또는 24,665 아래 이탈 후 회복 실패</div></div>
+<div class="strategy down"><div class="card-label">하락 대응</div><div class="st">24,665 이탈 후 회복 실패</div><div class="condition">반등이 24,665~24,685에서 다시 막힘</div><div class="action"><b>대응:</b> 반등 시 매도 우선<br/><b>하방 목표 순서:</b> 24,620~24,640 → 24,570~24,590 → 24,530~24,550</div><div class="cancel"><b>취소 조건:</b> 24,685 위 재진입 후 유지</div></div>
 </div>
 <div class="price-map">
 <div class="map-head"><div><div class="map-title">오늘 오전·오후장 가격구조</div></div><div class="map-current">현재 24,702</div></div>
@@ -387,10 +389,10 @@ canvas{width:100%;height:100%}
 <div class="session-value"><div class="sv-name">9/16 오전장 · 마감</div><div class="sv-data"><span class="ohlc-item"><span class="ohlc-label">고가</span><b>24,806</b></span><span class="ohlc-sep">·</span><span class="ohlc-item"><span class="ohlc-label">종가</span><b>24,711</b></span><span class="ohlc-sep">·</span><span class="ohlc-item"><span class="ohlc-label">저가</span><b>24,577</b></span></div></div>
 <div class="session-value"><div class="sv-name">9/16 오후장 · 15:47 현재</div><div class="sv-data"><span class="ohlc-item"><span class="ohlc-label">고가</span><b>24,745</b></span><span class="ohlc-sep">·</span><span class="ohlc-item"><span class="ohlc-label">현재</span><b>24,702</b></span><span class="ohlc-sep">·</span><span class="ohlc-item"><span class="ohlc-label">저가</span><b>24,668</b></span></div></div>
 </div></div>
-<div class="ladder-title">중요 가격대 — 트레이딩 공간과 구조적 중요도를 함께 반영</div>
+<div class="ladder-title">중요 가격대</div>
 <div class="level-rails">
 <div class="level-rail res"><div class="rail-head"><span class="rail-icon">↑</span>저항·목표</div><div class="rail-steps"><div class="rail-step" data-step="1"><div class="step">1차</div><div class="price">24,735~24,750</div><div class="meaning">오후장 고점권.</div></div><div class="rail-step" data-step="2"><div class="step">2차</div><div class="price">24,775~24,810</div><div class="meaning">오전 상단 핵심 구간.</div></div><div class="rail-step" data-step="3"><div class="step">3차</div><div class="price">24,835~24,855</div><div class="meaning">중간 상단 저항.</div></div><div class="rail-step" data-step="4"><div class="step">4차</div><div class="price">24,875~24,900</div><div class="meaning">강한 상단 저항.</div></div><div class="rail-step" data-step="5"><div class="step">5차</div><div class="price">24,980~25,025</div><div class="meaning">상위 구조 저항.</div></div></div></div>
-<div class="level-rail sup"><div class="rail-head"><span class="rail-icon">↓</span>지지·방어선</div><div class="rail-steps"><div class="rail-step" data-step="1"><div class="step">1차</div><div class="price">24,665~24,685</div><div class="meaning">오후장 저점권.</div></div><div class="rail-step" data-step="2"><div class="step">2차</div><div class="price">24,620~24,640</div><div class="meaning">중간 방어 구간.</div></div><div class="rail-step" data-step="3"><div class="step">3차</div><div class="price">24,570~24,590</div><div class="meaning">오전 저점권.</div></div><div class="rail-step" data-step="4"><div class="step">4차</div><div class="price">24,530~24,550</div><div class="meaning">하단 구조 지지.</div></div></div></div>
+<div class="level-rail sup"><div class="rail-head"><span class="rail-icon">↓</span>지지·하방 목표</div><div class="rail-steps"><div class="rail-step" data-step="1"><div class="step">1차</div><div class="price">24,665~24,685</div><div class="meaning">오후장 저점권.</div></div><div class="rail-step" data-step="2"><div class="step">2차</div><div class="price">24,620~24,640</div><div class="meaning">중간 지지 구간.</div></div><div class="rail-step" data-step="3"><div class="step">3차</div><div class="price">24,570~24,590</div><div class="meaning">오전 저점권.</div></div><div class="rail-step" data-step="4"><div class="step">4차</div><div class="price">24,530~24,550</div><div class="meaning">하단 구조 지지.</div></div></div></div>
 </div>
 <div class="confirm-block"><div class="title">Tencent·Alibaba·HSBC 확인법</div><div class="confirm-how">24,750 돌파 때 대형주가 함께 강하면 상단 대응의 신뢰도를 높입니다. 24,665 이탈과 함께 대형주도 약해지면 오전 저점권 재시험 가능성을 봅니다.</div></div>
 </div>
@@ -404,17 +406,16 @@ canvas{width:100%;height:100%}
 </div>
 <div class="firstline">
 <div class="firstbox"><div class="lab">1차 저항</div><div class="big red">1,067 ~ 1,069</div><div class="desc">다음 상단 확인 구간.</div></div>
-<div class="firstbox"><div class="lab">1차 지지</div><div class="big green">1,057.5 ~ 1,060.5</div><div class="desc">마감 직후 핵심 방어대.</div></div>
+<div class="firstbox"><div class="lab">1차 지지</div><div class="big green">1,057.5 ~ 1,060.5</div><div class="desc">마감 직후 핵심 지지대.</div></div>
 <div class="firstbox"><div class="lab">대표 현물 확인</div><div class="big">삼성전자 · SK하이닉스</div><div class="desc">다음 아시아 세션에서 선물 방향과 반도체 대형주의 동조 여부를 확인합니다.</div></div>
 </div>
-<div class="hint-more">유럽 세션에서는 코스피 신규 전략보다 마감 구조와 다음 확인 가격을 참고합니다.</div>
 </summary>
 <div class="detail">
 <div class="title">마감 구조 → 다음 확인 가격</div>
 <div class="strategy-grid">
-<div class="strategy up"><div class="st">1,060.5 위 유지 → 강세 구조 유지</div><div class="condition">다음 세션에서도 마감 상단을 지지</div><div class="action"><b>다음 확인:</b> 1,067~1,069 → 1,076.5~1,078.5</div><div class="cancel">1,057.5 아래에서 머물면 강세 구조 약화.</div></div>
-<div class="strategy box"><div class="st">1,052.5~1,060.5 → 재정비 구간</div><div class="condition">상단 유지 실패 뒤 중심 가격대에서 균형</div><div class="action"><b>대응:</b> 유럽 세션에서는 참고만 하고 다음 아시아 세션에서 방향 확인.</div><div class="cancel">범위 이탈 시 다음 구조대로 이동.</div></div>
-<div class="strategy down"><div class="st">1,052.5 이탈 → 하단 구조 확인</div><div class="condition">반등이 1,052.5~1,054.5에서 막힘</div><div class="action"><b>다음 방어선:</b> 1,043~1,046.5 → 1,033~1,036.5</div><div class="cancel">1,054.5 재탈환 시 하락 구조 완화.</div></div>
+<div class="strategy up"><div class="st">1,060.5 위 유지 → 강세 구조 유지</div><div class="condition">다음 세션에서도 마감 상단을 지지</div><div class="action"><b>상방 목표 순서:</b> 1,067~1,069 → 1,076.5~1,078.5</div><div class="cancel">1,057.5 아래에서 머물면 강세 구조 약화.</div></div>
+<div class="strategy box"><div class="st">1,052.5~1,060.5 → 재정비 구간</div><div class="condition">상단 유지 실패 뒤 중심 가격대에서 균형</div><div class="action"><b>대응:</b> 가운데에서는 방향 확인 대기.</div><div class="cancel">범위 이탈 시 다음 구조대로 이동.</div></div>
+<div class="strategy down"><div class="st">1,052.5 이탈 → 하단 구조 확인</div><div class="condition">반등이 1,052.5~1,054.5에서 막힘</div><div class="action"><b>하방 목표 순서:</b> 1,043~1,046.5 → 1,033~1,036.5</div><div class="cancel">1,054.5 재탈환 시 하락 구조 완화.</div></div>
 </div>
 <div class="price-map">
 <div class="map-head"><div><div class="map-title">전일 야간과 오늘 정규장 마감 구조</div></div><div class="map-current">종가 1,061.15</div></div>
@@ -423,12 +424,12 @@ canvas{width:100%;height:100%}
 <div class="session-value"><div class="sv-name">9/15 야간장</div><div class="sv-data"><span class="ohlc-item"><span class="ohlc-label">고가</span><b>1,050.30</b></span><span class="ohlc-sep">·</span><span class="ohlc-item"><span class="ohlc-label">종가</span><b>1,038.00</b></span><span class="ohlc-sep">·</span><span class="ohlc-item"><span class="ohlc-label">저가</span><b>1,030.30</b></span></div></div>
 <div class="session-value"><div class="sv-name">9/16 정규장 · 마감</div><div class="sv-data"><span class="ohlc-item"><span class="ohlc-label">고가</span><b>1,061.85</b></span><span class="ohlc-sep">·</span><span class="ohlc-item"><span class="ohlc-label">종가</span><b>1,061.15</b></span><span class="ohlc-sep">·</span><span class="ohlc-item"><span class="ohlc-label">저가</span><b>1,036.30</b></span></div></div>
 </div></div>
-<div class="ladder-title">다음 아시아 세션 참고 가격</div>
+<div class="ladder-title">다음 확인 가격</div>
 <div class="level-rails">
 <div class="level-rail res"><div class="rail-head"><span class="rail-icon">↑</span>저항·목표</div><div class="rail-steps"><div class="rail-step" data-step="1"><div class="step">1차</div><div class="price">1,067~1,069</div><div class="meaning">다음 상단 저항.</div></div><div class="rail-step" data-step="2"><div class="step">2차</div><div class="price">1,076.5~1,078.5</div><div class="meaning">확장 목표 구간.</div></div></div></div>
-<div class="level-rail sup"><div class="rail-head"><span class="rail-icon">↓</span>지지·방어선</div><div class="rail-steps"><div class="rail-step" data-step="1"><div class="step">1차</div><div class="price">1,057.5~1,060.5</div><div class="meaning">마감 상단 지지.</div></div><div class="rail-step" data-step="2"><div class="step">2차</div><div class="price">1,052.5~1,054.5</div><div class="meaning">중간 방어 구간.</div></div><div class="rail-step" data-step="3"><div class="step">3차</div><div class="price">1,043~1,046.5</div><div class="meaning">하단 구조 지지.</div></div><div class="rail-step" data-step="4"><div class="step">4차</div><div class="price">1,033~1,036.5</div><div class="meaning">깊은 조정 방어대.</div></div></div></div>
+<div class="level-rail sup"><div class="rail-head"><span class="rail-icon">↓</span>지지·하방 목표</div><div class="rail-steps"><div class="rail-step" data-step="1"><div class="step">1차</div><div class="price">1,057.5~1,060.5</div><div class="meaning">마감 상단 지지.</div></div><div class="rail-step" data-step="2"><div class="step">2차</div><div class="price">1,052.5~1,054.5</div><div class="meaning">중간 지지 구간.</div></div><div class="rail-step" data-step="3"><div class="step">3차</div><div class="price">1,043~1,046.5</div><div class="meaning">하단 구조 지지.</div></div><div class="rail-step" data-step="4"><div class="step">4차</div><div class="price">1,033~1,036.5</div><div class="meaning">깊은 조정 지지대.</div></div></div></div>
 </div>
-<div class="confirm-block"><div class="title">코스피 확인법</div><div class="confirm-how">유럽 세션에서는 마감 구조만 참고합니다. 다음 아시아 세션에서 1,057.5~1,060.5 유지와 삼성전자·SK하이닉스 동조 여부를 우선 확인합니다.</div></div>
+<div class="confirm-block"><div class="title">코스피 확인법</div><div class="confirm-how">1,057.5~1,060.5 유지 여부와 삼성전자·SK하이닉스 동조 여부를 우선 확인합니다.</div></div>
 </div>
 </details><div class="footer">2026.09.16 · EUROPE SESSION FUTURES PLAYBOOK</div></div>
 <script>
