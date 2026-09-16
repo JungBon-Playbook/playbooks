@@ -232,6 +232,11 @@ canvas{width:100%;height:100%}
    content:"↓";left:21px;right:auto;top:auto;bottom:-13px;transform:none;
    width:16px;height:16px;font-size:.7rem;background:#fff;color:#8996a5
  }
+ .level-rail.res .rail-steps{display:flex;flex-direction:column-reverse;gap:7px}
+ .level-rail.res .rail-step:not(:last-child)::after{
+   content:"↑";left:21px;right:auto;top:-13px;bottom:auto;transform:none;
+   width:16px;height:16px;font-size:.7rem;background:#fff;color:#8996a5
+ }
  .rail-step .step{display:none}
  .rail-step .price{font-size:1rem;margin:0 0 2px}
  .rail-step .meaning{font-size:.74rem}
@@ -333,7 +338,7 @@ canvas{width:100%;height:100%}
 <div class="hint-more">가까운 후보는 정리하고, 단타에 필요한 중간 가격대와 구조적 레벨은 유지했습니다.</div>
 </summary>
 <div class="detail">
-<div class="title">가격 조건 → 대응 → 다음 가격 → 무효화</div>
+<div class="title">가격 조건 → 대응 → 다음 가격 → 취소 조건</div>
 <div class="strategy-grid">
 <div class="strategy up"><div class="st">29,380 위 안착 → 상승 대응</div><div class="condition">돌파 뒤 눌림에서도 29,365 위 유지</div><div class="action"><b>대응:</b> 눌림 매수 우선<br/><b>다음 목표:</b> 29,400~29,415 → 29,435~29,450 → 29,490~29,505</div><div class="cancel">29,365 아래로 재진입하면 추격 중단.</div></div>
 <div class="strategy box"><div class="st">29,320~29,380 → 단기 박스 대응</div><div class="condition">상단 돌파 실패와 하단 방어가 반복</div><div class="action"><b>대응:</b> 가운데 추격 금지. 양 끝 반응만 짧게 대응.</div><div class="cancel">29,380 위 지지 또는 29,320 아래 저항 전환 시 방향 대응.</div></div>
@@ -369,7 +374,7 @@ canvas{width:100%;height:100%}
 <div class="hint-more">오전·오후 구조를 함께 반영하되, 붙어 있는 약한 후보는 줄였습니다.</div>
 </summary>
 <div class="detail">
-<div class="title">가격 조건 → 대응 → 다음 가격 → 무효화</div>
+<div class="title">가격 조건 → 대응 → 다음 가격 → 취소 조건</div>
 <div class="strategy-grid">
 <div class="strategy up"><div class="st">24,750 위 안착 → 상승 대응</div><div class="condition">돌파 뒤 24,735 위 유지</div><div class="action"><b>대응:</b> 눌림 매수 우선<br/><b>다음 목표:</b> 24,775~24,810 → 24,835~24,855 → 24,875~24,900 → 24,980~25,025</div><div class="cancel">24,735 아래로 다시 밀리면 추격 중단.</div></div>
 <div class="strategy box"><div class="st">24,665~24,750 → 박스 대응</div><div class="condition">오후장 고저 안에서 반복 왕복</div><div class="action"><b>대응:</b> 가운데 추격 금지. 양 끝 반응만 짧게 대응.</div><div class="cancel">24,750 위 지지 또는 24,665 아래 저항 전환 시 방향 대응.</div></div>
