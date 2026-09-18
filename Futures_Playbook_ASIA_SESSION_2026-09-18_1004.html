@@ -407,7 +407,7 @@ canvas{width:100%;height:100%}
 <div class="market-head">
 <div><div class="market-name">항셍 선물</div><div class="contract">9월물 · 10:15 주간장 개장 전</div></div>
 <div class="last"><div class="lab">직전 야간 종가</div><div class="val">24,667</div></div>
-<div class="readme"><b>핵심 대응:</b> 현재 10:15 개장 전이므로 9/17 야간장 마감 구조를 기준으로 봅니다. <span class="red">24,680~24,700</span> 상단 돌파 후 지지하면 24,715~730을 보고, <span class="green">24,650~24,665</span> 하단 이탈 후 회복 실패면 24,570~585를 우선 확인합니다.</div>
+<div class="readme"><b>핵심 대응:</b> 현재 10:15 개장 전이므로 9/17 야간장 마감 구조를 기준으로 봅니다. <span class="red">24,680~24,700</span> 상단 돌파 후 지지하면 24,715~730 → 24,745~760 → 24,795~810 순서로 확인하고, <span class="green">24,650~24,665</span> 하단 이탈 후 회복 실패면 24,570~585를 우선 확인합니다.</div>
 <div aria-hidden="true" class="plus"></div>
 </div>
 <div class="firstline">
@@ -420,7 +420,7 @@ canvas{width:100%;height:100%}
 <div class="detail">
 <div class="title">상승 · 박스권 · 하락 대응 전략</div>
 <div class="strategy-grid">
-<div class="strategy up"><div class="card-label">상승 대응</div><div class="st">24,700 위 안착</div><div class="condition">24,680~24,700 상단 돌파 뒤 눌림에서도 유지</div><div class="action"><b>대응:</b> 눌림 시 매수 우선<br/><b>상방 목표 순서:</b> 24,715~24,730 → 24,745~24,760</div><div class="cancel"><b>취소 조건:</b> 24,680 아래 재이탈 후 회복 실패</div></div>
+<div class="strategy up"><div class="card-label">상승 대응</div><div class="st">24,700 위 안착</div><div class="condition">24,680~24,700 상단 돌파 뒤 눌림에서도 유지</div><div class="action"><b>대응:</b> 눌림 시 매수 우선<br/><b>상방 목표 순서:</b> 24,715~24,730 → 24,745~24,760 → 24,795~24,810 → 24,835~24,855</div><div class="cancel"><b>취소 조건:</b> 24,680 아래 재이탈 후 회복 실패</div></div>
 <div class="strategy box"><div class="card-label">박스권 대응</div><div class="st">24,650~24,700 안에서 왕복</div><div class="condition">개장 직후 방향 탐색</div><div class="action"><b>대응:</b> 중앙 추격 자제 · 하단 반응 시 매수 / 상단 실패 시 매도</div><div class="cancel"><b>전환 조건:</b> 24,700 위 안착 또는 24,650 하단 이탈 후 회복 실패</div></div>
 <div class="strategy down"><div class="card-label">하락 대응</div><div class="st">24,650 하단 이탈 후 회복 실패</div><div class="condition">반등이 24,650~24,665에서 다시 막힘</div><div class="action"><b>대응:</b> 반등 시 매도 우선<br/><b>하방 목표 순서:</b> 24,570~24,585 → 24,525~24,540 → 24,440~24,455</div><div class="cancel"><b>취소 조건:</b> 24,665 위 재진입 후 유지</div></div>
 </div>
@@ -438,8 +438,10 @@ canvas{width:100%;height:100%}
 <div class="level-rails">
 <div class="level-rail res"><div class="rail-head"><span class="rail-icon">↑</span>저항 · 상방 목표</div><div class="rail-steps">
 <div class="rail-step" data-step="1"><div class="step">1차</div><div class="price">24,680~24,700</div><div class="meaning">직전 야간 고점권.</div></div>
-<div class="rail-step" data-step="2"><div class="step">2차</div><div class="price">24,715~24,730</div><div class="meaning">상위 야간 저항.</div></div>
-<div class="rail-step" data-step="3"><div class="step">3차</div><div class="price">24,745~24,760</div><div class="meaning">추가 상방 목표.</div></div>
+<div class="rail-step" data-step="2"><div class="step">2차</div><div class="price">24,715~24,730</div><div class="meaning">근거리 상단 저항.</div></div>
+<div class="rail-step" data-step="3"><div class="step">3차</div><div class="price">24,745~24,760</div><div class="meaning">근거리 상단 목표.</div></div>
+<div class="rail-step" data-step="4"><div class="step">4차</div><div class="price">24,795~24,810</div><div class="meaning">24,800 부근 중간 구조.</div></div>
+<div class="rail-step" data-step="5"><div class="step">5차</div><div class="price">24,835~24,855</div><div class="meaning">상위 구조 저항.</div></div>
 </div></div>
 <div class="level-rail sup"><div class="rail-head"><span class="rail-icon">↓</span>지지 · 하방 목표</div><div class="rail-steps">
 <div class="rail-step" data-step="1"><div class="step">1차</div><div class="price">24,650~24,665</div><div class="meaning">직전 종가 부근.</div></div>
@@ -525,8 +527,10 @@ const maps={
     ], last:29665.25
   },
   mapHsi:{
-    min:24420,max:24780,
+    min:24420,max:24880,
     zones:[
+      [24835,24855,'r','5차 저항','24,835~24,855',3],
+      [24795,24810,'r','4차 저항','24,795~24,810',4],
       [24745,24760,'r','3차 저항','24,745~24,760',2],
       [24715,24730,'r','2차 저항','24,715~24,730',3],
       [24680,24700,'r','1차 저항','24,680~24,700',4],
