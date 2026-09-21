@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+
+<html lang="ko">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>9월 16일 수요일 유럽 세션 선물 대응전략 | Futures Playbook</title>
+<style>
+:root{
+  --bg:#f3f5f7; --paper:#fff; --text:#16202b; --muted:#5f6d7d; --line:#d9e0e7;
+  --blue:#245fc1; --blue-bg:#edf4ff; --green:#157a4f; --green-bg:#ebf8f1;
+  --red:#c4383f; --red-bg:#fff0f1; --amber:#8a6500; --amber-bg:#fff6dc;
+}
+html{font-size:18px}
+html.font20{font-size:20px}
+html.font22{font-size:22px}
+*{box-sizing:border-box}
+body{
+  margin:0;background:var(--bg);color:var(--text);
+  font-family:Inter,"Pretendard","Noto Sans KR","Malgun Gothic",Arial,sans-serif;
+  line-height:1.6;
+}
+.wrap{max-width:1380px;margin:auto;padding:22px}
+.top{display:flex;justify-content:space-between;gap:18px;align-items:flex-start;margin-bottom:12px}
+.kicker{font-size:.72rem;font-weight:900;letter-spacing:.12em;color:var(--blue)}
+h1{font-size:1.65rem;line-height:1.25;margin:4px 0 4px}
+.subtitle{font-size:.91rem;color:var(--muted)}
+.actions{display:flex;gap:8px}
+button{
+  font:inherit;font-size:.82rem;font-weight:850;padding:7px 11px;background:#fff;color:var(--text);
+  border:1px solid var(--line);border-radius:9px;cursor:pointer
+}
+button:hover{border-color:#8eaedb}
+
+/* guide */
+.guide{
+  background:#fff;border:1px solid var(--line);border-radius:14px;padding:14px 16px;margin-bottom:12px
+}
+.guide-title{font-size:1.06rem;font-weight:950;margin-bottom:9px}
+.guide-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.guide-card{border:1px solid var(--line);border-radius:11px;padding:11px 12px;background:#fbfcfd}
+.guide-card .head{display:flex;justify-content:space-between;gap:10px;align-items:baseline}
+.guide-card .name{font-size:.88rem;font-weight:950}
+.guide-card .value{font-size:1.05rem;font-weight:950}
+.guide-card .use{font-size:.82rem;line-height:1.5;margin-top:5px;color:#344254}
+.guide-card .use b{color:var(--text)}
+.guide-foot{font-size:.78rem;color:var(--muted);margin-top:9px}
+
+
+
+/* market */
+.market{width:100%;max-width:100%;background:#fff;border:2px solid #aeb9c6;border-left:6px solid #74859a;border-radius:15px;margin:16px 0;overflow:hidden;box-shadow:0 4px 14px rgba(25,42,62,.07)}
+.market[open]{border-color:#8798ab;border-left-color:#245fc1;box-shadow:0 6px 20px rgba(25,42,62,.10)}
+summary{list-style:none;cursor:pointer}
+summary::-webkit-details-marker{display:none}
+.summary{padding:16px 17px}
+.market-head{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,.48fr) minmax(0,2.15fr) 40px;gap:15px;align-items:center}
+.market-head>*{min-width:0}
+.market-name{font-size:1.25rem;font-weight:950}
+.contract{font-size:.76rem;color:var(--muted);margin-top:2px}
+.last .lab{font-size:.69rem;color:var(--muted);font-weight:900}
+.last .val{font-size:1.2rem;font-weight:950}
+.readme{font-size:.9rem;line-height:1.55}
+.plus{
+  width:36px;height:36px;border-radius:50%;border:1px solid #cad4df;
+  position:relative;color:var(--blue);transition:.18s;background:#fff;
+  flex:0 0 36px;
+}
+.plus::before,.plus::after{
+  content:"";position:absolute;left:50%;top:50%;
+  width:14px;height:2px;background:currentColor;border-radius:2px;
+  transform:translate(-50%,-50%);
+  transform-origin:center center;
+}
+.plus::after{transform:translate(-50%,-50%) rotate(90deg)}
+details[open] .plus{transform:rotate(45deg);background:var(--blue-bg);border-color:#9fb8dc}
+
+.firstline{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr) minmax(0,1.15fr);gap:9px;margin-top:12px}
+.firstline>*{min-width:0}
+.firstbox{border:1px solid var(--line);background:#f9fafb;border-radius:10px;padding:10px 11px}
+.firstbox .lab{font-size:.72rem;color:var(--muted);font-weight:900}
+.firstbox .big{font-size:.98rem;font-weight:950;margin-top:2px}
+.firstbox .desc{font-size:.78rem;color:#49596a;line-height:1.48;margin-top:3px}
+.red{color:var(--red)}.green{color:var(--green)}.blue{color:var(--blue)}
+.hint-more{font-size:.75rem;color:var(--blue);font-weight:850;margin-top:8px}
+
+/* detail */
+.detail{border-top:2px solid #c7d0da;padding:18px;background:#fcfdfe}
+.title{font-size:1.03rem;font-weight:950;margin:0 0 4px}
+.sub{font-size:.8rem;color:var(--muted);margin-bottom:10px}
+.strategy-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.strategy{background:#fff;border:1px solid var(--line);border-radius:11px;padding:12px 13px}
+.strategy.up{border-top:4px solid var(--green)}
+.strategy.box{border-top:4px solid #c08a12}
+.strategy.down{border-top:4px solid var(--red)}
+.strategy .st{font-size:.93rem;font-weight:950;line-height:1.4}
+.strategy .card-label{font-size:.72rem;font-weight:950;margin-bottom:5px}
+.strategy.up .card-label{color:var(--green)}
+.strategy.box .card-label{color:#9a6b00}
+.strategy.down .card-label{color:var(--red)}
+.strategy .condition{font-size:.82rem;font-weight:800;background:#f6f8fa;border-radius:8px;padding:7px 8px;margin-top:7px;line-height:1.5}
+.strategy .action{font-size:.82rem;line-height:1.53;margin-top:7px}
+.strategy .cancel{font-size:.74rem;color:var(--muted);margin-top:6px}
+
+/* price map */
+.price-map{margin-top:14px;background:#fff;border:1px solid var(--line);border-radius:12px;padding:13px}
+.map-head{display:flex;justify-content:space-between;gap:14px;align-items:end}
+.map-title{font-size:.95rem;font-weight:950}
+.map-current{font-size:.78rem;color:var(--blue);font-weight:950;text-align:right;white-space:nowrap}
+.canvas-wrap{height:330px;margin-top:8px;border:1px solid #e3e8ed;border-radius:9px;background:#fff;padding:4px}
+
+.session-values{
+  display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin-top:8px
+}
+.session-value{
+  border:1px solid #e1e6ec;border-radius:9px;background:#fafbfd;padding:8px 10px
+}
+.session-value .sv-name{font-size:.72rem;font-weight:950;color:#344354;margin-bottom:2px}
+.session-value .sv-data{font-size:.72rem;color:#5f6d7d;line-height:1.45;display:flex;align-items:baseline;gap:.28em;flex-wrap:wrap}
+.session-value .sv-data b{color:#263443}
+.ohlc-item{display:inline-flex;align-items:baseline;gap:.25em;white-space:nowrap}
+.ohlc-sep{color:#9aa5b2}
+.ohlc-label{white-space:nowrap}
+canvas{width:100%;height:100%}
+
+/* next levels / directional price rail */
+.ladder-title{font-size:1rem;font-weight:950;margin:16px 0 8px}
+.level-rails{display:grid;grid-template-columns:1fr;gap:10px}
+.level-rail{
+  border:1px solid var(--line);border-radius:12px;background:#fff;padding:11px 12px
+}
+.rail-head{
+  display:flex;align-items:center;gap:8px;margin-bottom:9px;font-size:.86rem;font-weight:950
+}
+.rail-head .rail-icon{
+  width:24px;height:24px;border-radius:50%;display:grid;place-items:center;
+  font-size:.75rem;font-weight:950;flex:0 0 24px
+}
+.level-rail.res .rail-head{color:var(--red)}
+.level-rail.res .rail-icon{background:var(--red-bg)}
+.level-rail.sup .rail-head{color:var(--green)}
+.level-rail.sup .rail-icon{background:var(--green-bg)}
+.rail-steps{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:8px;counter-reset:railstep
+}
+.rail-step{
+  position:relative;border:1px solid #e1e6ec;border-radius:9px;padding:10px 10px 10px 12px;
+  background:#fbfcfd;min-width:0
+}
+.rail-step:not(:last-child)::after{
+  content:"→";position:absolute;right:-13px;top:50%;transform:translateY(-50%);
+  z-index:2;width:18px;height:18px;border-radius:50%;background:#fff;color:#8b98a8;
+  display:grid;place-items:center;font-size:.76rem;font-weight:900
+}
+.rail-step .step{font-size:.68rem;font-weight:950;color:var(--muted)}
+.rail-step .price{font-size:.98rem;font-weight:950;line-height:1.25;margin:2px 0 4px}
+.level-rail.res .rail-step .price{color:var(--red)}
+.level-rail.sup .rail-step .price{color:var(--green)}
+.rail-step .meaning{font-size:.75rem;line-height:1.48;color:#465566}
+.rail-note{
+  margin-top:8px;padding-top:8px;border-top:1px solid #edf0f3;
+  font-size:.72rem;color:var(--muted);line-height:1.45
+}
+
+/* confirmation */
+.confirm-block{margin-top:15px;background:#fff;border:1px solid var(--line);border-radius:12px;padding:13px}
+.confirm-how{
+  padding:9px 10px;border-radius:9px;background:var(--blue-bg);font-size:.84rem;line-height:1.55;margin-bottom:10px
+}
+.confirm-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.stock{border:1px solid var(--line);border-radius:9px;padding:10px}
+.stock .name{font-size:.87rem;font-weight:950}
+.stock .now{font-size:.93rem;font-weight:950;margin:2px 0}
+.stock .rule{font-size:.76rem;color:#4d5d6e;line-height:1.5}
+.stock .upmark{color:var(--green);font-weight:900}
+.stock .dnmark{color:var(--red);font-weight:900}
+
+
+/* glossary */
+.glossary{
+  background:#fff;border:1px solid #cfd8e3;border-radius:12px;margin-top:14px;overflow:hidden
+}
+.glossary>summary{
+  padding:12px 14px;display:flex;align-items:center;justify-content:space-between;
+  gap:12px;background:#fbfcfe;color:#2d3b4d
+}
+.glossary>summary:hover{background:#f5f8fc}
+.glossary-title-wrap{display:flex;align-items:center;gap:9px;min-width:0}
+.glossary-icon{
+  width:26px;height:26px;border-radius:50%;display:grid;place-items:center;
+  background:var(--blue-bg);color:var(--blue);font-size:.75rem;font-weight:950;flex:0 0 26px
+}
+.glossary-title{font-size:.82rem;font-weight:950}
+.glossary-subtitle{font-size:.68rem;color:var(--muted);margin-left:5px;font-weight:600}
+.glossary-action{font-size:.68rem;color:var(--blue);font-weight:900;white-space:nowrap}
+.glossary-action::after{content:"▼ 펼치기"}
+.glossary[open] .glossary-action::after{content:"▲ 접기"}
+.glossary-grid{
+  border-top:1px solid var(--line);padding:12px 14px;
+  display:grid;grid-template-columns:repeat(3,1fr);gap:8px;background:#fff
+}
+.term{
+  border:1px solid #e1e6ec;border-radius:9px;padding:9px 10px;background:#fafbfd
+}
+.term .tn{font-size:.76rem;font-weight:950;line-height:1.35}
+.term .td{font-size:.68rem;color:#5f6d7d;line-height:1.48;margin-top:3px}
+
+/* calculation */
+.calc{margin-top:13px;border:1px dashed #cbd4de;border-radius:9px;background:#fff;padding:9px 11px}
+.calc summary{font-size:.76rem;color:var(--muted);font-weight:900}
+.calc div{font-size:.72rem;color:var(--muted);line-height:1.6;margin-top:7px}
+
+.source{background:#fff;border:1px solid var(--line);border-radius:10px;padding:9px 11px;margin-top:11px}
+.source summary{font-size:.74rem;color:var(--muted);font-weight:900}
+.source div{font-size:.7rem;color:var(--muted);line-height:1.55;margin-top:7px}
+.footer{text-align:center;font-size:.7rem;color:#84909c;margin:14px 0}
+
+@media(max-width:950px){
+ .guide-grid,.strategy-grid,.confirm-grid,.glossary-grid{grid-template-columns:1fr}
+ .market-head{grid-template-columns:minmax(0,1fr) minmax(0,.55fr) 40px}
+ .readme{grid-column:1/-1}
+ .firstline{grid-template-columns:1fr}
+}
+@media(max-width:620px){
+
+ .rail-steps{grid-template-columns:1fr;gap:7px}
+ .rail-step{padding:9px 10px 9px 46px;min-height:64px}
+ .rail-step::before{
+   content:attr(data-step);position:absolute;left:10px;top:50%;transform:translateY(-50%);
+   width:27px;height:27px;border-radius:50%;display:grid;place-items:center;
+   font-size:.7rem;font-weight:950;background:#eef2f6;color:#526274
+ }
+ .level-rail.res .rail-step::before{background:var(--red-bg);color:var(--red)}
+ .level-rail.sup .rail-step::before{background:var(--green-bg);color:var(--green)}
+ .rail-step:not(:last-child)::after{
+   content:"↓";left:21px;right:auto;top:auto;bottom:-13px;transform:none;
+   width:16px;height:16px;font-size:.7rem;background:#fff;color:#8996a5
+ }
+ .level-rail.res .rail-steps{display:flex;flex-direction:column-reverse;gap:7px}
+ .level-rail.res .rail-step:not(:last-child)::after{
+   content:"↑";left:21px;right:auto;top:-13px;bottom:auto;transform:none;
+   width:16px;height:16px;font-size:.7rem;background:#fff;color:#8996a5
+ }
+ .rail-step .step{display:none}
+ .rail-step .price{font-size:1rem;margin:0 0 2px}
+ .rail-step .meaning{font-size:.74rem}
+ .level-rail{padding:10px}
+ .rail-head{margin-bottom:7px}
+
+
+ .map-head{display:block}
+ .map-current{text-align:right;margin-top:0;line-height:1.3}
+ .canvas-wrap{height:420px;padding:2px}
+ .session-values{grid-template-columns:1fr;gap:6px}
+ .session-value{padding:8px 9px}
+ .session-value .sv-name{font-size:.7rem;margin-bottom:6px}
+ .session-value .sv-data{font-size:.7rem;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:4px;line-height:1.25}
+ .session-value .sv-data .ohlc-item{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1px;min-width:0;text-align:center}
+ .session-value .sv-data .ohlc-label{font-size:.9em;color:#7b8897;line-height:1.15}
+ .session-value .sv-data b{display:block;white-space:nowrap;font-size:1.04em;line-height:1.3}
+ .session-value .sv-data .ohlc-sep{display:none}
+
+ .wrap{padding:10px}.top{display:block}.actions{margin-top:9px}
+ .guide-grid{grid-template-columns:1fr}.market-head{grid-template-columns:minmax(0,1fr) minmax(0,.6fr) 40px}
+ h1{font-size:1.45rem}
+}
+</style>
+<!-- MASTER patch v20: dynamic canvas height by level count; all support/resistance labels remain visible; multi-session bar x positions fixed -->
+</head>
+<body>
+<div class="wrap">
+<header class="top">
+<div>
+<div class="kicker">U.S. PRE-OPEN FUTURES PLAYBOOK</div>
+<h1>9월 21일 월요일 미국 본장 전 선물 대응전략 <span style="font-weight:700;color:#5f6d7d">| Futures Playbook</span></h1>
+<div class="subtitle">21:28 KST 기준 · NQ 유럽 세션 진행 중 · HSI 야간1 진행 중 · 코스피200 제외</div>
+</div>
+<div class="actions">
+<button id="fontBtn" onclick="cycleFont()">글자 18px</button>
+<button onclick="toggleAll()">전체 펼치기/접기</button>
+</div>
+</header>
+
+<section class="guide">
+<div class="guide-title">미국 본장 전 먼저 볼 외부시장 변수</div>
+<div class="guide-grid">
+<div class="guide-card">
+<div class="head"><span class="name">미국 10년물 국채 금리</span><span class="value">4.948%</span></div>
+<div class="use"><b>21:14 기준</b> · 당일 4.942~4.973% · 전일 4.996%. 5% 아래에서 내려와 <b>NQ의 금리 부담은 완화</b>된 상태입니다.</div>
+</div>
+<div class="guide-card">
+<div class="head"><span class="name">WTI 11월물</span><span class="value">$93.34</span></div>
+<div class="use"><b>20:55 기준</b> · 당일 92.71~96.98 · 전일 96.08. 유가 급락은 <b>인플레이션·에너지 부담 완화</b> 쪽이지만 변동성은 큰 상태입니다.</div>
+</div>
+<div class="guide-card">
+<div class="head"><span class="name">DXY</span><span class="value">100.23</span></div>
+<div class="use"><b>21:21 기준</b> · 당일 100.18~100.38 · 전일 100.22. 달러는 보합권이라 <b>추가 강세 여부를 확인</b>합니다.</div>
+</div>
+</div>
+<div class="guide-foot"><b>체크포인트:</b> 금리와 WTI는 NQ에 우호적이고 DXY는 중립권입니다. NQ가 30,265~30,280을 상단 돌파해 유지하면 상승 흐름 연장을 보고, 30,190~30,210 하단 이탈 시에는 유럽 세션 저점권 재시험을 우선합니다.</div>
+</section>
+
+<details class="market">
+<summary class="summary">
+<div class="market-head">
+<div><div class="market-name">나스닥100 선물</div><div class="contract">NQZ26 12월물 · 미국 본장 개장 전</div></div>
+<div class="last"><div class="lab">21:28 현재</div><div class="val">30,226.00</div></div>
+<div class="readme"><b>핵심 대응:</b> 유럽 세션에서 30,275까지 상승한 뒤 30,226입니다. <span class="red">30,265~30,280</span> 상단 돌파 후 지지하면 30,330~350을 보고, <span class="green">30,190~30,210</span> 하단 이탈 후 회복 실패면 30,125~145를 우선 확인합니다.</div>
+<div aria-hidden="true" class="plus"></div>
+</div>
+<div class="firstline">
+<div class="firstbox"><div class="lab">1차 저항</div><div class="big red">30,265 ~ 30,280</div><div class="desc">유럽 세션 고점권.</div></div>
+<div class="firstbox"><div class="lab">1차 지지</div><div class="big green">30,190 ~ 30,210</div><div class="desc">현재가 아래 첫 지지.</div></div>
+<div class="firstbox"><div class="lab">대표 현물 확인</div><div class="big">NVIDIA · Apple · Microsoft</div><div class="desc">미국 프리마켓에서 3개 중 2개 이상이 NQ와 같은 방향이면 돌파·이탈 신뢰를 높입니다.</div></div>
+</div>
+</summary>
+<div class="detail">
+<div class="title">상승 · 박스권 · 하락 대응 전략</div>
+<div class="strategy-grid">
+<div class="strategy up"><div class="card-label">상승 대응</div><div class="st">30,280 위 안착</div><div class="condition">30,265~30,280 상단 돌파 뒤 눌림에서도 유지</div><div class="action"><b>대응:</b> 눌림 시 매수 우선<br/><b>상방 목표 순서:</b> 30,330~30,350 → 30,420~30,450</div><div class="cancel"><b>취소 조건:</b> 30,265 아래 재이탈 후 회복 실패</div></div>
+<div class="strategy box"><div class="card-label">박스권 대응</div><div class="st">30,190~30,280 안에서 왕복</div><div class="condition">유럽 세션 상단부에서 방향 탐색</div><div class="action"><b>대응:</b> 중앙 추격 자제 · 하단 반응 시 매수 / 상단 실패 시 매도</div><div class="cancel"><b>전환 조건:</b> 30,280 위 안착 또는 30,190 하단 이탈 후 회복 실패</div></div>
+<div class="strategy down"><div class="card-label">하락 대응</div><div class="st">30,190 하단 이탈 후 회복 실패</div><div class="condition">반등이 30,190~30,210에서 다시 막힘</div><div class="action"><b>대응:</b> 반등 시 매도 우선<br/><b>하방 목표 순서:</b> 30,125~30,145 → 30,090~30,105 → 29,990~30,010</div><div class="cancel"><b>취소 조건:</b> 30,210 위 재진입 후 유지</div></div>
+</div>
+<div class="price-map">
+<div class="map-head"><div><div class="map-title">오늘 아시아·유럽 세션 가격구조</div></div><div class="map-current">현재 30,226.00</div></div>
+<div class="canvas-wrap"><canvas id="mapNq"></canvas></div>
+<div class="session-values">
+<div class="session-value"><div class="sv-name">9/21 아시아 세션</div><div class="sv-data"><span class="ohlc-item"><span class="ohlc-label">고가</span><b>30,144.50</b></span><span class="ohlc-sep">·</span><span class="ohlc-item"><span class="ohlc-label">종가</span><b>30,140.75</b></span><span class="ohlc-sep">·</span><span class="ohlc-item"><span class="ohlc-label">저가</span><b>29,904.00</b></span></div></div>
+<div class="session-value"><div class="sv-name">9/21 유럽 세션 · 21:28 현재</div><div class="sv-data"><span class="ohlc-item"><span class="ohlc-label">고가</span><b>30,275.00</b></span><span class="ohlc-sep">·</span><span class="ohlc-item"><span class="ohlc-label">현재</span><b>30,226.00</b></span><span class="ohlc-sep">·</span><span class="ohlc-item"><span class="ohlc-label">저가</span><b>30,126.00</b></span></div></div>
+</div>
+</div>
+<div class="ladder-title">중요 가격대</div>
+<div class="level-rails">
+<div class="level-rail res"><div class="rail-head"><span class="rail-icon">↑</span>저항 · 상방 목표</div><div class="rail-steps">
+<div class="rail-step" data-step="1"><div class="step">1차</div><div class="price">30,265~30,280</div><div class="meaning">유럽 세션 고점권.</div></div>
+<div class="rail-step" data-step="2"><div class="step">2차</div><div class="price">30,330~30,350</div><div class="meaning">다음 상방 목표.</div></div>
+<div class="rail-step" data-step="3"><div class="step">3차</div><div class="price">30,420~30,450</div><div class="meaning">상위 구조 목표.</div></div>
+</div></div>
+<div class="level-rail sup"><div class="rail-head"><span class="rail-icon">↓</span>지지 · 하방 목표</div><div class="rail-steps">
+<div class="rail-step" data-step="1"><div class="step">1차</div><div class="price">30,190~30,210</div><div class="meaning">현재가 아래 첫 지지.</div></div>
+<div class="rail-step" data-step="2"><div class="step">2차</div><div class="price">30,125~30,145</div><div class="meaning">유럽 저점·아시아 종가권.</div></div>
+<div class="rail-step" data-step="3"><div class="step">3차</div><div class="price">30,090~30,105</div><div class="meaning">중간 하방 구조.</div></div>
+<div class="rail-step" data-step="4"><div class="step">4차</div><div class="price">29,990~30,010</div><div class="meaning">30,000 라운드 가격권.</div></div>
+</div></div>
+</div>
+<div class="confirm-block"><div class="title">NQ 확인법</div><div class="confirm-how">금리와 WTI가 낮아진 상태에서 현물 3개 중 2개 이상이 동조하며 30,280 위를 유지하면 상승 대응 신뢰도를 높입니다. DXY가 강해지거나 30,190을 하단 이탈하면 상방 추격을 줄입니다.</div></div>
+</div>
+</details>
+
+<details class="market">
+<summary class="summary">
+<div class="market-head">
+<div><div class="market-name">항셍 선물</div><div class="contract">HSIU26 9월물 · 야간1 진행 중</div></div>
+<div class="last"><div class="lab">21:20 현재</div><div class="val">25,116</div></div>
+<div class="readme"><b>핵심 대응:</b> 야간1에서 25,136까지 오른 뒤 25,116입니다. <span class="red">25,125~25,140</span> 상단 돌파 후 지지하면 25,180~200을 보고, <span class="green">25,095~25,105</span> 하단 이탈 후 회복 실패면 25,045~060을 우선 확인합니다.</div>
+<div aria-hidden="true" class="plus"></div>
+</div>
+<div class="firstline">
+<div class="firstbox"><div class="lab">1차 저항</div><div class="big red">25,125 ~ 25,140</div><div class="desc">야간1 고점권.</div></div>
+<div class="firstbox"><div class="lab">1차 지지</div><div class="big green">25,095 ~ 25,105</div><div class="desc">현재가 아래 첫 지지.</div></div>
+<div class="firstbox"><div class="lab">확인 포인트</div><div class="big">NQ와 동조 여부</div><div class="desc">야간1에서는 NQ 방향과 외부시장 변수의 동조 여부를 우선합니다.</div></div>
+</div>
+</summary>
+<div class="detail">
+<div class="title">상승 · 박스권 · 하락 대응 전략</div>
+<div class="strategy-grid">
+<div class="strategy up"><div class="card-label">상승 대응</div><div class="st">25,140 위 안착</div><div class="condition">25,125~25,140 상단 돌파 뒤 눌림에서도 유지</div><div class="action"><b>대응:</b> 눌림 시 매수 우선<br/><b>상방 목표 순서:</b> 25,180~25,200 → 25,270~25,300</div><div class="cancel"><b>취소 조건:</b> 25,125 아래 재이탈 후 회복 실패</div></div>
+<div class="strategy box"><div class="card-label">박스권 대응</div><div class="st">25,095~25,140 안에서 왕복</div><div class="condition">야간1 고점권에서 방향 탐색</div><div class="action"><b>대응:</b> 중앙 추격 자제 · 하단 반응 시 매수 / 상단 실패 시 매도</div><div class="cancel"><b>전환 조건:</b> 25,140 위 안착 또는 25,095 하단 이탈 후 회복 실패</div></div>
+<div class="strategy down"><div class="card-label">하락 대응</div><div class="st">25,095 하단 이탈 후 회복 실패</div><div class="condition">반등이 25,095~25,105에서 다시 막힘</div><div class="action"><b>대응:</b> 반등 시 매도 우선<br/><b>하방 목표 순서:</b> 25,045~25,060 → 24,980~25,000 → 24,880~24,900</div><div class="cancel"><b>취소 조건:</b> 25,105 위 재진입 후 유지</div></div>
+</div>
+<div class="price-map">
+<div class="map-head"><div><div class="map-title">오늘 주간장·야간1 가격구조</div></div><div class="map-current">현재 25,116</div></div>
+<div class="canvas-wrap"><canvas id="mapHsi"></canvas></div>
+<div class="session-values">
+<div class="session-value"><div class="sv-name">9/21 주간장</div><div class="sv-data"><span class="ohlc-item"><span class="ohlc-label">고가</span><b>25,057</b></span><span class="ohlc-sep">·</span><span class="ohlc-item"><span class="ohlc-label">종가</span><b>25,045</b></span><span class="ohlc-sep">·</span><span class="ohlc-item"><span class="ohlc-label">저가</span><b>24,669</b></span></div></div>
+<div class="session-value"><div class="sv-name">9/21 야간1 · 21:20 현재</div><div class="sv-data"><span class="ohlc-item"><span class="ohlc-label">고가</span><b>25,136</b></span><span class="ohlc-sep">·</span><span class="ohlc-item"><span class="ohlc-label">현재</span><b>25,116</b></span><span class="ohlc-sep">·</span><span class="ohlc-item"><span class="ohlc-label">저가</span><b>25,049</b></span></div></div>
+</div>
+</div>
+<div class="ladder-title">중요 가격대</div>
+<div class="level-rails">
+<div class="level-rail res"><div class="rail-head"><span class="rail-icon">↑</span>저항 · 상방 목표</div><div class="rail-steps">
+<div class="rail-step" data-step="1"><div class="step">1차</div><div class="price">25,125~25,140</div><div class="meaning">야간1 고점권.</div></div>
+<div class="rail-step" data-step="2"><div class="step">2차</div><div class="price">25,180~25,200</div><div class="meaning">중간 상방 목표.</div></div>
+<div class="rail-step" data-step="3"><div class="step">3차</div><div class="price">25,270~25,300</div><div class="meaning">상위 구조 목표.</div></div>
+</div></div>
+<div class="level-rail sup"><div class="rail-head"><span class="rail-icon">↓</span>지지 · 하방 목표</div><div class="rail-steps">
+<div class="rail-step" data-step="1"><div class="step">1차</div><div class="price">25,095~25,105</div><div class="meaning">현재가 아래 첫 지지.</div></div>
+<div class="rail-step" data-step="2"><div class="step">2차</div><div class="price">25,045~25,060</div><div class="meaning">주간 종가·야간 저점권.</div></div>
+<div class="rail-step" data-step="3"><div class="step">3차</div><div class="price">24,980~25,000</div><div class="meaning">25,000 라운드 가격권.</div></div>
+<div class="rail-step" data-step="4"><div class="step">4차</div><div class="price">24,880~24,900</div><div class="meaning">주간 중간 구조.</div></div>
+</div></div>
+</div>
+<div class="confirm-block"><div class="title">항셍 확인법</div><div class="confirm-how">NQ가 30,280 위를 유지하면서 HSI도 25,140 위로 따라붙으면 상승 대응 신뢰도를 높입니다. 반대로 NQ가 약해지고 HSI가 25,095를 하단 이탈하면 하방 목표를 순서대로 확인합니다.</div></div>
+</div>
+</details>
+<details class="glossary">
+<summary>
+<div class="glossary-title-wrap">
+<span class="glossary-icon">?</span>
+<span class="glossary-title">용어가 낯설다면? 주요 용어 보기</span>
+<span class="glossary-subtitle">필요할 때만 펼쳐보세요</span>
+</div>
+<span class="glossary-action"></span>
+</summary>
+<div class="glossary-grid">
+<div class="term"><div class="tn">지지 / 저항</div><div class="td">내려오던 가격이 멈출 가능성이 큰 구간은 지지, 올라가던 가격이 막힐 가능성이 큰 구간은 저항입니다.</div></div>
+<div class="term"><div class="tn">돌파 / 이탈</div><div class="td">저항 위로 올라서는 것을 돌파, 지지 아래로 내려가는 것을 이탈이라고 합니다. 이후 그 가격을 유지하는지가 중요합니다.</div></div>
+<div class="term"><div class="tn">지지·저항 전환</div><div class="td">넘긴 저항이 눌림에서 지지가 되거나, 깨진 지지가 반등에서 저항이 되는 움직임입니다.</div></div>
+<div class="term"><div class="tn">눌림 / 되돌림</div><div class="td">상승 중 잠시 내려오거나 하락 중 잠시 반등하는 움직임입니다. 돌파한 가격대를 다시 확인할 때 자주 나타납니다.</div></div>
+<div class="term"><div class="tn">5일선 / 20일선</div><div class="td">최근 5일·20일 평균가격입니다. 가격이 이 부근에서 지지·저항을 받는지 확인합니다.</div></div>
+<div class="term"><div class="tn">핵심 가격대</div><div class="td">여러 가격 구조가 겹쳐 반응 가능성이 높아진 구간입니다. 한 가격보다 범위로 대응합니다.</div></div>
+<div class="term"><div class="tn">라운드 가격</div><div class="td">1,100·25,000·30,000처럼 기억하기 쉬운 둥근 가격입니다. 주문과 심리가 모이기 쉬워 지지·저항이 되기도 합니다.</div></div>
+<div class="term"><div class="tn">주간장 / 야간장</div><div class="td">주간 정규 거래시간과 그 이후 이어지는 선물 거래시간입니다. 야간장은 해외시장 움직임을 먼저 반영할 수 있습니다.</div></div>
+<div class="term"><div class="tn">박스권</div><div class="td">상단 저항과 하단 지지 사이에서 방향을 정하지 못하고 왕복하는 구간입니다.</div></div>
+</div>
+</details>
+<div class="footer">2026.09.21 · U.S. PRE-OPEN FUTURES PLAYBOOK</div></div>
+<script>
+let fontStep=0;
+function cycleFont(){
+  fontStep=(fontStep+1)%3;
+  const root=document.documentElement;
+  root.classList.remove('font20','font22');
+  const btn=document.getElementById('fontBtn');
+  if(fontStep===0){btn.textContent='글자 18px';}
+  if(fontStep===1){root.classList.add('font20');btn.textContent='글자 20px';}
+  if(fontStep===2){root.classList.add('font22');btn.textContent='글자 22px';}
+  setTimeout(drawAll,60);
+}
+function toggleAll(){
+  const items=[...document.querySelectorAll('details.market')];
+  const open=items.some(x=>!x.open);
+  items.forEach(x=>x.open=open);
+  setTimeout(drawAll,70);
+}
+
+const maps={
+  mapNq:{
+    min:29900,max:30480,
+    zones:[
+      [30420,30450,'r','3차 저항','30,420~30,450',3],
+      [30330,30350,'r','2차 저항','30,330~30,350',3],
+      [30265,30280,'r','1차 저항','30,265~30,280',4],
+      [30190,30210,'g','1차 지지','30,190~30,210',3],
+      [30125,30145,'g','2차 지지','30,125~30,145',4],
+      [30090,30105,'g','3차 지지','30,090~30,105',2],
+      [29990,30010,'g','4차 지지','29,990~30,010',3]
+    ],
+    bars:[
+      ['9/21 아시아',30144.50,29904.00,30140.75],
+      ['9/21 유럽',30275.00,30126.00,30226.00]
+    ], last:30226.00
+  },
+  mapHsi:{
+    min:24800,max:25320,
+    zones:[
+      [25270,25300,'r','3차 저항','25,270~25,300',3],
+      [25180,25200,'r','2차 저항','25,180~25,200',3],
+      [25125,25140,'r','1차 저항','25,125~25,140',4],
+      [25095,25105,'g','1차 지지','25,095~25,105',3],
+      [25045,25060,'g','2차 지지','25,045~25,060',4],
+      [24980,25000,'g','3차 지지','24,980~25,000',3],
+      [24880,24900,'g','4차 지지','24,880~24,900',3]
+    ],
+    bars:[
+      ['9/21 주간장',25057,24669,25045],
+      ['9/21 야간1',25136,25049,25116]
+    ], last:25116
+  }
+};
+
+function strengthAlpha(level){
+  if(level>=3) return {fill:.24,border:.78,text:1.0,connector:.55};
+  if(level===2) return {fill:.14,border:.52,text:.86,connector:.38};
+  return {fill:.08,border:.34,text:.72,connector:.26};
+}
+function rgba(rgb,a){ return `rgba(${rgb[0]},${rgb[1]},${rgb[2]},${a})`; }
+function zoneStyle(type,title,strength){
+  const isResistance = String(title||'').includes('저항') || String(type||'').startsWith('r');
+  const rgb = isResistance ? [196,56,63] : [21,122,79];
+  const a=strengthAlpha(strength||2);
+  return {fill:rgba(rgb,a.fill),border:rgba(rgb,a.border),text:rgba(rgb,a.text),connector:rgba(rgb,a.connector)};
+}
+function draw(id,cfg){
+  const cv=document.getElementById(id); if(!cv)return;
+
+  // The chart height must grow with the number of support/resistance bands.
+  // A fixed 330/420px canvas clips the lower labels when 4~6+ levels exist.
+  const wrap=cv.parentElement;
+  const width=wrap.getBoundingClientRect().width;
+  const mobile = width < 700;
+  const neededHeight = mobile
+    ? Math.max(420, cfg.zones.length * 38 + 40)
+    : Math.max(330, cfg.zones.length * 38 + 40);
+  wrap.style.height = neededHeight + 'px';
+
+  const r=cv.getBoundingClientRect(); if(r.width<40||r.height<40)return;
+  const dpr=window.devicePixelRatio||1;
+  cv.width=r.width*dpr; cv.height=r.height*dpr;
+  const c=cv.getContext('2d'); c.scale(dpr,dpr);
+
+  const w=r.width, h=r.height;
+  const p = mobile
+    ? {l:58,r:10,t:18,b:22}
+    : {l:95,r:215,t:15,b:18};
+
+  const plotW = Math.max(40, w-p.l-p.r);
+  const plotH = Math.max(80, h-p.t-p.b);
+  const y=v=>p.t+(cfg.max-v)/(cfg.max-cfg.min)*plotH;
+
+  c.clearRect(0,0,w,h);
+  c.fillStyle='#fff'; c.fillRect(0,0,w,h);
+
+  // Grid + left price scale
+  c.font = mobile ? '11px system-ui' : '13px system-ui';
+  c.textAlign='right';
+  for(let i=0;i<=6;i++){
+    const v=cfg.max-(cfg.max-cfg.min)*i/6, yy=y(v);
+    c.strokeStyle='#edf1f4'; c.lineWidth=1;
+    c.beginPath(); c.moveTo(p.l,yy); c.lineTo(w-p.r,yy); c.stroke();
+    c.fillStyle='#718092';
+    c.fillText(v>10000?Math.round(v).toLocaleString():v.toFixed(1),p.l-7,yy+4);
+  }
+
+  // Support/resistance band fills first. Width = price area.
+  // Color family = direction, intensity = strength.
+  cfg.zones.forEach(z=>{
+    const [lo,hi,type,title,price,strength]=z;
+    const style=zoneStyle(type,title,strength);
+    const yt=y(hi), yb=y(lo);
+    c.fillStyle=style.fill;
+    c.fillRect(p.l,yt,plotW,Math.max(2,yb-yt));
+    c.strokeStyle=style.border;
+    c.lineWidth=1;
+    c.strokeRect(p.l,yt,plotW,Math.max(2,yb-yt));
+  });
+
+  // Final-price guide line. Its text label is also drawn last.
+  const yl=y(cfg.last);
+  c.setLineDash([6,5]); c.strokeStyle='#245fc1'; c.lineWidth=2;
+  c.beginPath(); c.moveTo(p.l,yl); c.lineTo(w-p.r,yl); c.stroke();
+  c.setLineDash([]);
+
+  // Session/day high-low bars
+  // Allocate one independent x position per session bar. This also fixes
+  // three-bar maps (e.g. KOSPI regular/night/current), where a fixed two-item
+  // x-array previously left the third bar without a valid coordinate.
+  const barCount = cfg.bars.length;
+  const xs = Array.from({length:barCount},(_,i)=>{
+    if(barCount===1) return p.l+plotW*.82;
+    const start = mobile ? .64 : .35;
+    const end   = mobile ? .94 : .83;
+    return p.l + plotW * (start + (end-start)*i/(barCount-1));
+  });
+
+  cfg.bars.forEach((b,i)=>{
+    const [name,hi,lo,cl]=b, x=xs[i];
+
+    c.strokeStyle='#3f5268'; c.lineWidth=mobile?5:6;
+    c.beginPath(); c.moveTo(x,y(hi)); c.lineTo(x,y(lo)); c.stroke();
+
+    c.lineWidth=2;
+    const cap=mobile?10:17;
+    c.beginPath(); c.moveTo(x-cap,y(hi)); c.lineTo(x+cap,y(hi)); c.stroke();
+    c.beginPath(); c.moveTo(x-cap,y(lo)); c.lineTo(x+cap,y(lo)); c.stroke();
+
+    c.fillStyle='#245fc1'; c.beginPath();
+    c.arc(x,y(cl),mobile?5.5:7,0,Math.PI*2); c.fill();
+
+    // Session names and exact OHLC values are intentionally omitted from
+    // the canvas on both desktop and mobile. They are shown once, in the
+    // session data cards directly below the chart, to avoid duplicate data.
+  });
+
+  // Support/resistance labels use a dedicated lane, separate from the
+  // session high-low bars. The level name sits above the price so vertical
+  // range bars can never run through the digits.
+  const labelItems = cfg.zones.map(z=>{
+    const [lo,hi,type,title,price,strength]=z;
+    const targetY=(y(hi)+y(lo))/2;
+    return {lo,hi,type,title,price,strength,targetY,labelY:targetY,isResistance:(String(title).includes('저항') || String(type).startsWith('r'))};
+  });
+
+  const boxH = mobile ? 22 : 24;
+  const labelHalf = boxH/2;
+  const labelGap = boxH + 4;
+  const topLimit = p.t + labelHalf + 2;
+  const bottomLimit = p.t + plotH - labelHalf - 2;
+
+  const resistances = labelItems.filter(x=>x.isResistance).sort((a,b)=>b.targetY-a.targetY); // nearest first
+  const supports = labelItems.filter(x=>!x.isResistance).sort((a,b)=>a.targetY-b.targetY);    // nearest first
+
+  // Keep 1st resistance/support close to their real band centers. Only move labels when boxes would overlap.
+  const nearestR = resistances[0]?.targetY ?? p.t;
+  const nearestS = supports[0]?.targetY ?? (p.t+plotH);
+  const centerBoundary = (nearestR + nearestS) / 2;
+
+  let prev = centerBoundary - labelHalf - 2;
+  resistances.forEach((item,idx)=>{
+    item.labelY = idx===0 ? Math.min(item.targetY, prev) : Math.min(item.targetY, prev-labelGap);
+    prev=item.labelY;
+  });
+  if(resistances.length && resistances[resistances.length-1].labelY<topLimit){
+    const shift=topLimit-resistances[resistances.length-1].labelY;
+    resistances.forEach(x=>x.labelY+=shift);
+  }
+
+  prev = centerBoundary + labelHalf + 2;
+  supports.forEach((item,idx)=>{
+    item.labelY = idx===0 ? Math.max(item.targetY, prev) : Math.max(item.targetY, prev+labelGap);
+    prev=item.labelY;
+  });
+  if(supports.length && supports[supports.length-1].labelY>bottomLimit){
+    const shift=supports[supports.length-1].labelY-bottomLimit;
+    supports.forEach(x=>x.labelY-=shift);
+  }
+
+  const orderedLabelItems=[...resistances.sort((a,b)=>a.labelY-b.labelY),...supports.sort((a,b)=>a.labelY-b.labelY)];
+
+  orderedLabelItems.forEach(item=>{
+    const style=zoneStyle(item.type,item.title,item.strength);
+    const stepMatch = String(item.title).match(/(\d+)/);
+    const compactPrefix = stepMatch ? stepMatch[1] : '';
+    const roundedLo = Math.round(item.lo).toLocaleString();
+    const roundedHi = Math.round(item.hi).toLocaleString();
+    const compactText = `${compactPrefix}:${roundedLo}~${roundedHi}`;
+    const labelX = mobile ? p.l+4 : w-p.r+8;
+    const labelW = mobile ? Math.min(128,plotW*.46) : Math.max(150,p.r-20);
+    const boxY = item.labelY-boxH/2;
+    if(mobile){
+      const connectorEnd=p.l+plotW*.56;
+      c.strokeStyle=style.connector; c.lineWidth=1;
+      c.beginPath(); c.moveTo(labelX+labelW,item.labelY); c.lineTo(connectorEnd,item.targetY); c.stroke();
+    }
+    c.fillStyle='rgba(255,255,255,.94)'; c.fillRect(labelX,boxY,labelW,boxH);
+    c.strokeStyle=style.border; c.lineWidth=1;
+    c.strokeRect(labelX+.5,boxY+.5,labelW-1,boxH-1);
+    c.textAlign='left'; c.textBaseline='middle'; c.fillStyle=style.text;
+    c.font = mobile ? '800 10.5px system-ui' : '800 12px system-ui';
+    c.fillText(compactText,labelX+5,item.labelY+0.5);
+    c.textBaseline='alphabetic';
+  });
+
+  // Final price text is intentionally omitted from the canvas.
+  // The single current/close value is shown in the map header.
+}
+function drawAll(){Object.entries(maps).forEach(([id,cfg])=>draw(id,cfg))}
+document.querySelectorAll('details.market').forEach(d=>d.addEventListener('toggle',()=>setTimeout(drawAll,45)));
+window.addEventListener('load',drawAll);window.addEventListener('resize',drawAll);
+</script>
+</body>
+</html>
